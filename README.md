@@ -1,8 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cable CloudWork Exercise
 
-## Getting Started
+## The goals of this exercise
 
-First, run the development server:
+Demonstrate skill in writing clientside state management code and provide a topic of converation during the interview proccess.
+
+The code patterns and frameworks used in this repo offer a good representation of our existing codebase and the problems we most want
+
+## The Exercise
+
+### Problem
+
+The CloudWork app is a management panel that allows users to manage _workloads_. Workloads are jobs which run in the cloud. They are created with a complexity which increases the amount of time the workload takes to complete. A workload will complete with a success or failure status.
+
+The app should allow users to:
+
+- View their workloads
+- Create new workloads
+- See a workload’s up-to-date status
+- Cancel workloads that have not complete
+
+### Code provided
+
+This is a bare-bones app with some code to get you started. Please feel free to change anything you like about the code already written.
+
+The frameworks included are:
+
+- [Mobx](https://mobx.js.org) and [mobx-react-lite](https://mobx.js.org/react-integration.html)
+- [Next.js](https://nextjs.org)
+
+Key files:
+
+- `components/App` - The main `App` component and `AppController` state controller. Probably a good starting point.
+- `lib/MockCloudworkService.ts` - A fake network service which should be used develop against.
+
+### Getting started with the code
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -13,26 +46,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
