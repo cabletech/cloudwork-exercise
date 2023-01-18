@@ -6,7 +6,7 @@ Demonstrate skill in writing clientside state management code and provide a topi
 
 The code patterns and frameworks used in this repo offer a good representation of our existing codebase and the problems we most want
 
-## The Exercise
+## The exercise
 
 ### Problem
 
@@ -32,6 +32,20 @@ Key files:
 
 - `components/App` - The main `App` component and `AppController` state controller. Probably a good starting point.
 - `lib/MockCloudworkService.ts` - A fake network service which should be used develop against.
+
+### Steps
+
+- Wire up being able to create a work load
+  - Send create resquest to mock service
+  - Handle the random simulated network errors
+  - Render a list of created workloads
+- Show users the status of the workload once it complete
+- Add ability to cancel a workload
+  - Send cancel request to mock service
+  - Update rendered list of rquests
+- Good UX for canceling
+  - Use the end date provided by the mock services
+  - Update UI to show realtime countdown
 
 ### Getting started with the code
 
