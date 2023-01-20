@@ -2,52 +2,60 @@
 
 ## The goals of this exercise
 
-Demonstrate skill in writing clientside state management code and provide a topic of converation during the interview proccess.
+The goal of this exercise to to establish an ability to understand a brief and demonstrate skill in writing client-side state management code. We would like participants to respond to this brief by writing us a sample of code. You are not expected to complete all aspects of the brief.
 
-The code patterns and frameworks used in this repo offer a good representation of our existing codebase and the problems we most want
+This exercise will also provide content for the subsequent technical interview.
 
-## The exercise
+We ask that you give this exercise an amount of time that makes sense for your schedule. Ideally this would be a couple of hours with a goal of solving at least one of the basic and one of the advanced problems.
 
-### Problem
+The code patterns and frameworks used in this repo offer a good representation of our existing codebase and the problems we most want help solving. However, please feel free to change anything about the existing code - this exercise should not be a test on a library you have no experience with.
 
-The CloudWork app is a management panel that allows users to manage _workloads_. Workloads are jobs which run in the cloud. They are created with a complexity which increases the amount of time the workload takes to complete. A workload will complete with a success or failure status.
+Please make use of the existing unstyled UI components. Spend no time worrying about the visual design of the app.
+
+## Setting the scene
+
+CloudWork is a fictitious web app that allows user to manage _workloads_. Workloads are jobs which run in the cloud. They are created with a complexity number which increases the amount of time the workload takes to complete. A workload will complete with a success or failure status.
+
+![Wireframe of the app](./wireframe.png)
 
 The app should allow users to:
 
 - View their workloads
 - Create new workloads
-- See a workload’s up-to-date status
-- Cancel workloads that have not complete
+- View a workload’s up-to-date status
+- Cancel workloads that are incomplete
 
-### Code provided
+## The code we have provided
 
-This is a bare-bones app with some code to get you started. Please feel free to change anything you like about the code already written.
+This repo contains some co. Please feel free to change anything you like about the code already written.
 
-The frameworks included are:
+What’s included:
 
-- [Mobx](https://mobx.js.org) and [mobx-react-lite](https://mobx.js.org/react-integration.html)
-- [Next.js](https://nextjs.org)
+- A bare bones Next.js app
+- A `MockCloudworkService` class which behaves like a CloudWork a backend service. It offers Typescript interfaces of the data the service returns.
+- Some functional but unstyled UI components (don’t worry about making the app look good).
+- A functional `WorkloadForm` component.
+- An incomplete `AppController` class which is build with Mobx.
 
-Key files:
+Please feel free to continue using Mobx if you have the experience or like the challenge. Otherwise you can replace it with your own patterns and libraries.
 
-- `components/App` - The main `App` component and `AppController` state controller. Probably a good starting point.
-- `lib/MockCloudworkService.ts` - A fake network service which should be used develop against.
+## Problems to solve
 
-### Steps
+Don't feel like you must solve all of these problems. Try and solve at least one of the advanced problems.
 
-- Wire up being able to create a work load
-  - Send create resquest to mock service
-  - Handle the random simulated network errors
-  - Render a list of created workloads
-- Show users the status of the workload once it complete
-- Add ability to cancel a workload
-  - Send cancel request to mock service
-  - Update rendered list of rquests
-- Good UX for canceling
-  - Use the end date provided by the mock services
-  - Update UI to show realtime countdown
+### Basic
 
-### Getting started with the code
+- Creating a new workload by sending a message to the backend service
+- Handling network errors
+- Displaying a list of workloads
+- Showing the success/failure state of a complete workload
+
+### Advanced
+
+- The ability to cancel a workload only before it is complete
+- Display an updating count-down of the time remaining until a workload completes
+
+## Getting started with the code
 
 Run the development server:
 
