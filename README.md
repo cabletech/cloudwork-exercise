@@ -2,7 +2,7 @@
 
 ## The goals of this exercise
 
-The goal of this exercise to to establish an ability to understand a brief and demonstrate skill in writing client-side state management code. We would like participants to respond to this brief by writing us a sample of code. You are not expected to complete all aspects of the brief.
+The goal of this exercise is to establish the ability to understand a brief and demonstrate skill in writing client-side state management code. We would like participants to respond to this brief by writing us a sample of code. You are not expected to complete all aspects of the brief.
 
 This exercise will also provide content for the subsequent technical interview.
 
@@ -27,12 +27,12 @@ The app should allow users to:
 
 ## The code we have provided
 
-This repo contains some co. Please feel free to change anything you like about the code already written.
+This repo contains some code. Please feel free to change anything you like about the code already written.
 
 What’s included:
 
 - A bare bones Next.js app
-- A `MockCloudworkService` class which behaves like a CloudWork a backend service. It offers Typescript interfaces of the data the service returns.
+- A `MockCloudworkService` class which behaves like a CloudWork backend service. It offers Typescript interfaces of the data the service returns.
 - Some functional but unstyled UI components (don’t worry about making the app look good).
 - A functional `WorkloadForm` component.
 - An incomplete `AppController` class which is build with Mobx.
