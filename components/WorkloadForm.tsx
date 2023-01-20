@@ -59,6 +59,7 @@ class WorkloadFormController {
 
   private reset = () => {
     this.complexity = 1
+    this.loading = false
   }
 
   private startLoading = () => {

@@ -14,7 +14,6 @@ export const WorkloadList = observer<WorkloadListProps>(({ workloads }) => {
           <WorkloadItem
             work={work}
             onCancel={async (work) => {
-              // TODO: wireup cancel action
               console.log("Cancel workload", { work })
             }}
           />
