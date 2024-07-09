@@ -1,5 +1,6 @@
 import type { Work } from "@/lib/types"
 import WorkloadItem from "./WorkloadItem"
+import { useEffect, useState } from "react"
 
 interface WorkloadListProps {
   workloads: Work[]
@@ -8,9 +9,17 @@ interface WorkloadListProps {
 export const WorkloadList = ({ workloads }: WorkloadListProps) => {
   if (!workloads.length) return <div>No workloads</div>
 
+  const [filteredWorkloads, setFilteredWorkloads] = useState<Work[]>([])
+
+  useEffect(() => {
+    setFilteredWorkloads(
+      workloads.filter((workload) => workload.complexity > 3)
+    )
+  }, [workloads])
+
   return (
     <ul>
-      {workloads.map((work) => (
+      {filteredWorkloads.map((work) => (
         <li key={work.id}>
           <WorkloadItem
             work={work}
